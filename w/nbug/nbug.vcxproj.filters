@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{1b8d69fc-b721-4cea-b827-b124490727e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="al">
+      <UniqueIdentifier>{72719bb0-fd48-4f5d-ba93-3d9291d301bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ex">
+      <UniqueIdentifier>{cd22084d-fc7f-4f83-9d76-adeaff055867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl">
+      <UniqueIdentifier>{862ca7a3-f5d7-4bde-9d9e-69799224b89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input">
+      <UniqueIdentifier>{463c1ea4-6e83-4804-a617-b0418acec774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{b821fcb7-ea2c-4fdf-881d-25ca2f0d2c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl">
+      <UniqueIdentifier>{0988b665-7c3e-44eb-b211-b994a5222850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{2a36ac45-ba5d-44d0-95df-951caeb23943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl\font">
+      <UniqueIdentifier>{099f4dbc-0cb6-4d1f-be68-a87bff32c801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{dab871c1-8c44-4ac4-94fa-b5f8a17aeb51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script">
+      <UniqueIdentifier>{44636a5b-42c2-4e20-9141-98732ee5f959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script\test_suite">
+      <UniqueIdentifier>{6d80b0b5-2b9e-4853-924a-1d49ff2235ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script\test_suite\lib">
+      <UniqueIdentifier>{a8556b4b-d8f0-4128-86df-4a352621c0be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\zip.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\translate.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\time.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\thread.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\str.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ref.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\path.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\obj.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\missing.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ini.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\huffman.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\file.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\env.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\dll_load.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\def.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\debug_.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\debug.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\callback.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\buf.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="al\mixing_frac.h">
+      <Filter>al</Filter>
+    </ClInclude>
+    <ClInclude Include="al\midi.h">
+      <Filter>al</Filter>
+    </ClInclude>
+    <ClInclude Include="al\aplayer.h">
+      <Filter>al</Filter>
+    </ClInclude>
+    <ClInclude Include="al\afile.h">
+      <Filter>al</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\path_indexer.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\lua_state.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\fps_calc.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\uuid.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\tex.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\shader.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\rect.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\private.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\image.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\graphics_def.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\graphics_.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\graphics.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\gl_exts.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\fbo.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\color.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\font\font_loader.h">
+      <Filter>gl\font</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\font\font_.h">
+      <Filter>gl\font</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\font\font.h">
+      <Filter>gl\font</Filter>
+    </ClInclude>
+    <ClInclude Include="input\keyboard.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="input\joystick.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="net\sodket_fifo.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\sodket_buf.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\sodket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\private.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\packet_fifo.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ner_address.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\connection_manager.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win_.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\themes.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\pane_stack.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\pane_.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\pane.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\IListControl.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\button.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\str_array.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\stack.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\simple_list.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\set.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\map.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\list.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\array.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="tl\array2.h">
+      <Filter>tl</Filter>
+    </ClInclude>
+    <ClInclude Include="math\bezier.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\fft.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\async_delete.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="math\fixed.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="script\lexer.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="gl\static_3d.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="script\opcode.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\nbs.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\defs.h">
+      <Filter>script</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\zip.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\translate.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\time.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\thread.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\str_array.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\str.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ref.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\path.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\obj.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ini.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\file.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\env.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\dll_load.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\debug.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="al\oga.cc">
+      <Filter>al</Filter>
+    </ClCompile>
+    <ClCompile Include="al\midi.cc">
+      <Filter>al</Filter>
+    </ClCompile>
+    <ClCompile Include="al\aplayer.cc">
+      <Filter>al</Filter>
+    </ClCompile>
+    <ClCompile Include="al\afile.cc">
+      <Filter>al</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\path_indexer.cc">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\lua_state.cc">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\fps_calc.cc">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\image.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\graphics_.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\graphics.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\gl_exts.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\fbo.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\color.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\font\sys_font_loader.cc">
+      <Filter>gl\font</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\font\pic_font_loader.cc">
+      <Filter>gl\font</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\font\ft_font_loader.cc">
+      <Filter>gl\font</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\font\font.cc">
+      <Filter>gl\font</Filter>
+    </ClCompile>
+    <ClCompile Include="input\keyboard.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="input\joystick.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="net\sodket_fifo.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\sodket_buf.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\socket.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\packet_fifo.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ner_address.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\connection_manager.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\themes.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\pane_stack.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\pane.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\button.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="math\math.cc">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="ex\async_delete.cc">
+      <Filter>ex</Filter>
+    </ClCompile>
+    <ClCompile Include="math\fixed.cc">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="gl\static_3d.cc">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="script\lexer.cc">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\opcode.cc">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\nbs.cc">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\class.cc">
+      <Filter>script</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ex\uuid.cc.txt">
+      <Filter>ex</Filter>
+    </None>
+    <None Include="ex\dir.cmake">
+      <Filter>ex</Filter>
+    </None>
+    <None Include="al\dir.cmake">
+      <Filter>al</Filter>
+    </None>
+    <None Include="core\dir.cmake">
+      <Filter>core</Filter>
+    </None>
+    <None Include="gl\dir.cmake">
+      <Filter>gl</Filter>
+    </None>
+    <None Include="input\dir.cmake">
+      <Filter>input</Filter>
+    </None>
+    <None Include="net\dir.cmake">
+      <Filter>net</Filter>
+    </None>
+    <None Include="ui\dir.cmake">
+      <Filter>ui</Filter>
+    </None>
+    <None Include="script\dir.cmake">
+      <Filter>script</Filter>
+    </None>
+    <None Include="script\test_suite\function.nbs">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\lib\math.nbs">
+      <Filter>script\test_suite\lib</Filter>
+    </None>
+    <None Include="script\test_suite\recursive-depend-c.nbh">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\recursive-depend.nbs">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\recursive-depend-a.nbh">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\recursive-depend-b.nbh">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\class.nbs">
+      <Filter>script\test_suite</Filter>
+    </None>
+    <None Include="script\test_suite\types.nbs">
+      <Filter>script\test_suite</Filter>
+    </None>
+  </ItemGroup>
+</Project>

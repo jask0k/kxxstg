@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OptimizeDebug|Win32">
+      <Configuration>OptimizeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="al\afile.h" />
+    <ClInclude Include="al\aplayer.h" />
+    <ClInclude Include="al\midi.h" />
+    <ClInclude Include="al\mixing_frac.h" />
+    <ClInclude Include="core\buf.h" />
+    <ClInclude Include="core\callback.h" />
+    <ClInclude Include="core\debug.h" />
+    <ClInclude Include="core\debug_.h" />
+    <ClInclude Include="core\def.h" />
+    <ClInclude Include="core\dll_load.h" />
+    <ClInclude Include="core\env.h" />
+    <ClInclude Include="core\file.h" />
+    <ClInclude Include="core\huffman.h" />
+    <ClInclude Include="core\ini.h" />
+    <ClInclude Include="core\missing.h" />
+    <ClInclude Include="core\obj.h" />
+    <ClInclude Include="core\path.h" />
+    <ClInclude Include="core\ref.h" />
+    <ClInclude Include="core\str.h" />
+    <ClInclude Include="core\thread.h" />
+    <ClInclude Include="core\time.h" />
+    <ClInclude Include="core\translate.h" />
+    <ClInclude Include="core\zip.h" />
+    <ClInclude Include="ex\async_delete.h" />
+    <ClInclude Include="ex\fps_calc.h" />
+    <ClInclude Include="ex\lua_state.h" />
+    <ClInclude Include="ex\path_indexer.h" />
+    <ClInclude Include="ex\uuid.h" />
+    <ClInclude Include="gl\color.h" />
+    <ClInclude Include="gl\fbo.h" />
+    <ClInclude Include="gl\font\font.h" />
+    <ClInclude Include="gl\font\font_.h" />
+    <ClInclude Include="gl\font\font_loader.h" />
+    <ClInclude Include="gl\gl_exts.h" />
+    <ClInclude Include="gl\graphics.h" />
+    <ClInclude Include="gl\graphics_.h" />
+    <ClInclude Include="gl\graphics_def.h" />
+    <ClInclude Include="gl\image.h" />
+    <ClInclude Include="gl\private.h" />
+    <ClInclude Include="gl\rect.h" />
+    <ClInclude Include="gl\shader.h" />
+    <ClInclude Include="gl\static_3d.h" />
+    <ClInclude Include="gl\tex.h" />
+    <ClInclude Include="input\joystick.h" />
+    <ClInclude Include="input\keyboard.h" />
+    <ClInclude Include="math\bezier.h" />
+    <ClInclude Include="math\fft.h" />
+    <ClInclude Include="math\fixed.h" />
+    <ClInclude Include="math\math.h" />
+    <ClInclude Include="net\connection_manager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\ner_address.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\packet_fifo.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\private.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\sodket.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\sodket_buf.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="net\sodket_fifo.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="script\lexer.h" />
+    <ClInclude Include="script\class.h" />
+    <ClInclude Include="script\opcode.h" />
+    <ClInclude Include="script\defs.h" />
+    <ClInclude Include="script\nbs.h" />
+    <ClInclude Include="tl\array.h" />
+    <ClInclude Include="tl\array2.h" />
+    <ClInclude Include="tl\list.h" />
+    <ClInclude Include="tl\map.h" />
+    <ClInclude Include="tl\set.h" />
+    <ClInclude Include="tl\simple_list.h" />
+    <ClInclude Include="tl\stack.h" />
+    <ClInclude Include="tl\str_array.h" />
+    <ClInclude Include="ui\button.h" />
+    <ClInclude Include="ui\IListControl.h" />
+    <ClInclude Include="ui\menu.h" />
+    <ClInclude Include="ui\pane.h" />
+    <ClInclude Include="ui\pane_.h" />
+    <ClInclude Include="ui\pane_stack.h" />
+    <ClInclude Include="ui\themes.h" />
+    <ClInclude Include="ui\win.h" />
+    <ClInclude Include="ui\win_.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="al\afile.cc" />
+    <ClCompile Include="al\aplayer.cc" />
+    <ClCompile Include="al\midi.cc" />
+    <ClCompile Include="al\oga.cc" />
+    <ClCompile Include="core\debug.cc" />
+    <ClCompile Include="core\dll_load.cc" />
+    <ClCompile Include="core\env.cc" />
+    <ClCompile Include="core\file.cc" />
+    <ClCompile Include="core\ini.cc" />
+    <ClCompile Include="core\obj.cc" />
+    <ClCompile Include="core\path.cc" />
+    <ClCompile Include="core\ref.cc" />
+    <ClCompile Include="core\str.cc" />
+    <ClCompile Include="core\str_array.cc" />
+    <ClCompile Include="core\thread.cc" />
+    <ClCompile Include="core\time.cc" />
+    <ClCompile Include="core\translate.cc" />
+    <ClCompile Include="core\zip.cc" />
+    <ClCompile Include="ex\async_delete.cc" />
+    <ClCompile Include="ex\fps_calc.cc" />
+    <ClCompile Include="ex\lua_state.cc" />
+    <ClCompile Include="ex\path_indexer.cc" />
+    <ClCompile Include="gl\color.cc" />
+    <ClCompile Include="gl\fbo.cc" />
+    <ClCompile Include="gl\font\font.cc" />
+    <ClCompile Include="gl\font\ft_font_loader.cc" />
+    <ClCompile Include="gl\font\pic_font_loader.cc" />
+    <ClCompile Include="gl\font\sys_font_loader.cc" />
+    <ClCompile Include="gl\gl_exts.cc" />
+    <ClCompile Include="gl\graphics.cc" />
+    <ClCompile Include="gl\graphics_.cc" />
+    <ClCompile Include="gl\image.cc" />
+    <ClCompile Include="gl\static_3d.cc" />
+    <ClCompile Include="input\joystick.cc" />
+    <ClCompile Include="input\keyboard.cc" />
+    <ClCompile Include="math\fixed.cc" />
+    <ClCompile Include="math\math.cc" />
+    <ClCompile Include="net\connection_manager.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="net\ner_address.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="net\packet_fifo.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="net\socket.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="net\sodket_buf.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="net\sodket_fifo.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="script\lexer.cc" />
+    <ClCompile Include="script\class.cc" />
+    <ClCompile Include="script\opcode.cc" />
+    <ClCompile Include="script\nbs.cc" />
+    <ClCompile Include="ui\button.cc" />
+    <ClCompile Include="ui\menu.cc" />
+    <ClCompile Include="ui\pane.cc" />
+    <ClCompile Include="ui\pane_stack.cc" />
+    <ClCompile Include="ui\themes.cc" />
+    <ClCompile Include="ui\win.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="al\dir.cmake" />
+    <None Include="core\dir.cmake" />
+    <None Include="ex\dir.cmake" />
+    <None Include="ex\uuid.cc.txt" />
+    <None Include="gl\dir.cmake" />
+    <None Include="input\dir.cmake" />
+    <None Include="net\dir.cmake">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="script\dir.cmake" />
+    <None Include="script\test_suite\class.nbs" />
+    <None Include="script\test_suite\function.nbs" />
+    <None Include="script\test_suite\lib\math.nbs" />
+    <None Include="script\test_suite\recursive-depend-a.nbh" />
+    <None Include="script\test_suite\recursive-depend-b.nbh" />
+    <None Include="script\test_suite\recursive-depend-c.nbh" />
+    <None Include="script\test_suite\recursive-depend.nbs" />
+    <None Include="script\test_suite\types.nbs" />
+    <None Include="ui\dir.cmake" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>
+    </ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nbug</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build_vc\</OutDir>
+    <IntDir>$(SolutionDir)build_vc\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+    <TargetName>nbug_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build_vc\</OutDir>
+    <IntDir>$(SolutionDir)build_vc\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+    <TargetName>nbug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build_vc\</OutDir>
+    <IntDir>$(SolutionDir)build_vc\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+    <TargetName>nbug_od</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;E_CFG_JOYSTICK;NB_CFG_DSOUND;NB_CFG_OPENAL;E_CFG_DIRECT3D;E_CFG_OPENGL;NB_CFG_SRC_LOC;NB_CFG_MEMCHECK;NB_WINDOWS;WIN32;_DEBUG;NB_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4290;4018</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glu32.lib;shlwapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;E_CFG_JOYSTICK;NB_CFG_DSOUND;NB_CFG_OPENAL;E_CFG_DIRECT3D;E_CFG_OPENGL;NB_WINDOWS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4290;4018</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glu32.lib;shlwapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OptimizeDebug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NB_DEBUG;_CRT_SECURE_NO_WARNINGS;E_CFG_JOYSTICK;NB_CFG_DSOUND;NB_CFG_OPENAL;E_CFG_DIRECT3D;E_CFG_OPENGL;NB_WINDOWS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4290;4018</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glu32.lib;shlwapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

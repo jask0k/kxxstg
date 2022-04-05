@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{91b2e156-5533-4055-a787-031f4047701c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="drop">
+      <UniqueIdentifier>{9b5e97b0-d118-4cf7-96eb-cc0868f02d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="effect">
+      <UniqueIdentifier>{61ddf499-d46a-4501-9e5c-4a398d1df610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{76c8fd47-be9c-469e-ad18-f600b1c3827a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ex">
+      <UniqueIdentifier>{60417636-ac0c-4bf1-9882-a9f7ce1a12fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enemy">
+      <UniqueIdentifier>{b455ccf1-e5d0-41b1-97eb-44a9ce7b9023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{147385bd-8a86-4b04-94a5-036b918ac683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shot">
+      <UniqueIdentifier>{de7c661c-f7fb-4071-91fc-05f8348e02ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sprite">
+      <UniqueIdentifier>{02b8d73d-a37c-430a-864b-8fce49432a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage">
+      <UniqueIdentifier>{cb55ccd5-94b4-40c3-a8ea-018ae3349d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{be6017e4-9216-4d19-804c-db593a2ee5cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boss">
+      <UniqueIdentifier>{ef818ccb-05c1-43a4-bcf6-f5d63b565f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boss\a">
+      <UniqueIdentifier>{1b5e4f1d-a93f-4818-b95b-4ea16a18cba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boss\b">
+      <UniqueIdentifier>{02f16d86-4581-4785-8830-91ea22ebb52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\1">
+      <UniqueIdentifier>{3d1a1218-d275-4801-94ff-3cdcfce52ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\3">
+      <UniqueIdentifier>{51d38ce6-8b2d-4df4-8679-153d0cd6e003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\4">
+      <UniqueIdentifier>{f21d317c-2d86-4777-91d9-538e09cb559b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\5">
+      <UniqueIdentifier>{880560af-ee55-45a2-8a53-bc20d05a8659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\6">
+      <UniqueIdentifier>{ae47ca8d-e164-4b44-a039-219c67ecd116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\7">
+      <UniqueIdentifier>{9aca6b1f-643c-4f55-9d96-d9391590ce58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stage\2">
+      <UniqueIdentifier>{74f3f53a-7264-4148-aa39-ee3042dddf62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main\resource.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\options.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\kxxwin.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="drop\drop_def.h">
+      <Filter>drop</Filter>
+    </ClInclude>
+    <ClInclude Include="drop\drop.h">
+      <Filter>drop</Filter>
+    </ClInclude>
+    <ClInclude Include="effect\zizo_fade.h">
+      <Filter>effect</Filter>
+    </ClInclude>
+    <ClInclude Include="effect\simple_fade.h">
+      <Filter>effect</Filter>
+    </ClInclude>
+    <ClInclude Include="effect\lens_effect.h">
+      <Filter>effect</Filter>
+    </ClInclude>
+    <ClInclude Include="effect\fade.h">
+      <Filter>effect</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util_func.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\render_list.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\proc_image.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\cd_counter.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\ani.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\ani5.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\actor.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\enemy.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\lua_support.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="ex\lua_sprite.h">
+      <Filter>ex</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_base.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\top_score_screen.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\stage_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\replay_slot_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\player_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\pause_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\options_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\main_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ending_screen.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\credits_screen.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\confirm_menu.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\stage.h">
+      <Filter>stage</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\kxx_dialog.h">
+      <Filter>stage</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\unit.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\static_pic.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\sprite.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\spark1.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\simple_sprite.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\ring.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\general_aura.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\float_text.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\dynamic_pic.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\dandelions.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\ani_spark.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\worm_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\volcano_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\uniform_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\lua_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\laser_fan.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\lapillus_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\enemy_shots.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\comet_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\accelerate_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_b.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_a.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="sprite\galaxy.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\boss.h">
+      <Filter>boss</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\boss_script.h">
+      <Filter>boss</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\frozen_block.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\sc_name.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\stage_bonus.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\petal_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_b_shot1.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_b_shot0.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_b_sc.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_a_shot1.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_a_shot0.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_a_sc.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\scroll.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="effect\pass2.h">
+      <Filter>effect</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\enemy_0.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\enemy_1.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\enemy_2.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\time_line.h">
+      <Filter>stage</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\enemy_3.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\debug_shot.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy\wild_flower.h">
+      <Filter>enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\avatar.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\corpse.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\shot_crash.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite\boss_spread.h">
+      <Filter>sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_mid.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_na1.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_pet.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc1.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc2.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc3.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc4.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\b\boss_b.h">
+      <Filter>boss\b</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\b\boss_b_na1.h">
+      <Filter>boss\b</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\b\boss_b_sc1.h">
+      <Filter>boss\b</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\b\boss_b_move.h">
+      <Filter>boss\b</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_move.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\digital_roller.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\1\stage_1.h">
+      <Filter>stage\1</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\simple_stage_bg.h">
+      <Filter>stage</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\3\stage_3.h">
+      <Filter>stage\3</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\4\stage_4.h">
+      <Filter>stage\4</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\5\stage_5.h">
+      <Filter>stage\5</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\6\stage_6.h">
+      <Filter>stage\6</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\7\stage_7.h">
+      <Filter>stage\7</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\2\stage_2.h">
+      <Filter>stage\2</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc1_bg.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="boss\a\boss_a_sc5.h">
+      <Filter>boss\a</Filter>
+    </ClInclude>
+    <ClInclude Include="shot\laser.h">
+      <Filter>shot</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\5\gallery.h">
+      <Filter>stage\5</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\test_stage_bg.h">
+      <Filter>stage</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main\options.cc">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\main.cc">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\kxxwin.cc">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\config_dialog.cc">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="drop\drop.cc">
+      <Filter>drop</Filter>
+    </ClCompile>
+    <ClCompile Include="effect\zizo_fade.cc">
+      <Filter>effect</Filter>
+    </ClCompile>
+    <ClCompile Include="effect\simple_fade.cc">
+      <Filter>effect</Filter>
+    </ClCompile>
+    <ClCompile Include="effect\lens_effect.cc">
+      <Filter>effect</Filter>
+    </ClCompile>
+    <ClCompile Include="effect\fade.cc">
+      <Filter>effect</Filter>
+    </ClCompile>
+    <ClCompile Include="util\render_list.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\ani.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\ani5.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\actor.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\enemy.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_base.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\top_score_screen.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\stage_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\replay_slot_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\player_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\pause_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\options_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\main_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ending_screen.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\credits_screen.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\confirm_menu.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\stage.cc">
+      <Filter>stage</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\kxx_dialog.cc">
+      <Filter>stage</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\static_pic.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\sprite.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\spark1.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\simple_sprite.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\ring.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\general_aura.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\float_text.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\dynamic_pic.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\dandelions.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\ani_spark.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\worm_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\volcano_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\uniform_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\lua_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\laser_fan.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\lapillus_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\enemy_shots.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\comet_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\accelerate_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_b.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_a.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cc" />
+    <ClCompile Include="sprite\galaxy.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\boss.cc">
+      <Filter>boss</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\boss_script.cc">
+      <Filter>boss</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\frozen_block.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\sc_name.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\stage_bonus.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\petal_shot.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_b_shot1.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_b_shot0.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_b_sc.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_a_shot1.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_a_shot0.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_a_sc.cc">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\scroll.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="effect\pass2.cc">
+      <Filter>effect</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\enemy_0.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\enemy_1.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\enemy_2.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\time_line.cc">
+      <Filter>stage</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\add_enemy.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\enemy_3.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy\wild_flower.cc">
+      <Filter>enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\avatar.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\corpse.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite\shot_crash.cc">
+      <Filter>sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_mid.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_na1.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_pet.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc1.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc2.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc3.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc4.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\b\boss_b.cc">
+      <Filter>boss\b</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\b\boss_b_na1.cc">
+      <Filter>boss\b</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\b\boss_b_sc1.cc">
+      <Filter>boss\b</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\b\boss_b_move.cc">
+      <Filter>boss\b</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_move.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\digital_roller.cc">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\1\stage_1.cc">
+      <Filter>stage\1</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\simple_stage_bg.cc">
+      <Filter>stage</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\3\stage_3.cc">
+      <Filter>stage\3</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\4\stage_4.cc">
+      <Filter>stage\4</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\5\stage_5.cc">
+      <Filter>stage\5</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\6\stage_6.cc">
+      <Filter>stage\6</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\7\stage_7.cc">
+      <Filter>stage\7</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\2\stage_2.cc">
+      <Filter>stage\2</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc1_bg.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="boss\a\boss_a_sc5.cc">
+      <Filter>boss\a</Filter>
+    </ClCompile>
+    <ClCompile Include="shot\laser.cc">
+      <Filter>shot</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\5\gallery.cc">
+      <Filter>stage\5</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\test_stage_bg.cc">
+      <Filter>stage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="main\kxx.rc">
+      <Filter>main</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ex\lua_support.cc.del">
+      <Filter>ex</Filter>
+    </None>
+    <None Include="ex\lua_sprite.cc.del">
+      <Filter>ex</Filter>
+    </None>
+    <None Include="ex\kxx01.nsi">
+      <Filter>ex</Filter>
+    </None>
+    <None Include="CMakeLists.txt" />
+    <None Include="ex\pack_kxx.bat">
+      <Filter>ex</Filter>
+    </None>
+  </ItemGroup>
+</Project>

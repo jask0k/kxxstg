@@ -1,0 +1,219 @@
+// #include "../config.h"
+#include "LuaSprite.h"
+#include "KxxWin.h"
+
+namespace e
+{
+
+#ifdef E_CFG_LUA
+	LuaSprite * LuaSprite::_New(lua_State * L)
+	{
+		E_ASSERT(lua_istable(L,-1));
+
+		lua_pushstring(L, "Render");
+		E_ASSERT(lua_isstring(L,-1));
+		lua_gettable(L, -2);
+		E_ASSERT(lua_isfunction(L,-1));
+		int idRender = luaL_ref(L, LUA_REGISTRYINDEX);
+
+		lua_pushstring(L, "Step");
+		E_ASSERT(lua_isstring(L,-1));
+		lua_gettable(L, -2);
+		E_ASSERT(lua_isfunction(L,-1));
+		int idStep = luaL_ref(L, LUA_REGISTRYINDEX);
+
+
+		int idTable =  luaL_ref(L, LUA_REGISTRYINDEX);
+
+		LuaSprite * p = enew LuaSprite();
+		p->L = L;
+		p->idTable    = idTable;
+		p->idRender   = idRender;
+		p->idStep     = idStep;
+
+		return p;
+	}
+
+	int LuaSprite::NewSpark(lua_State * L)
+	{
+		int n = lua_gettop(L);
+		LuaSprite * p = _New(L);
+
+		int layer = n >=2 ? lua_tointeger(L, 2) : RL_GAME_SPARK;
+		kxxwin->AddEnemyShotToList(p, layer);
+		return 0;
+	}
+
+	//int LuaSprite::NewPlayerShot(lua_State * L)
+	//{
+	//	LuaSprite * p = _New(L);
+	//	kxxwin->AddPlayerShotToList(p);
+	//	return 0;
+	//}
+
+	LuaSprite::~LuaSprite()
+	{
+		lua_unref(L, idRender);
+		lua_unref(L, idStep);
+		lua_unref(L, idTable);
+	}
+
+
+	//bool LuaSprite::Collide(const Vector2 & _pt, float _r)
+	//{
+	//	E_PROFILE_INCLUDE;
+	//	// function name
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idCollide);
+	//	E_ASSERT(lua_isfunction(L,-1));
+	//	// push self
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idTable);
+	//	E_ASSERT(lua_istable(L,-1));
+	//	// other args
+	//	lua_pushnumber(L, _pt.x);
+	//	lua_pushnumber(L, _pt.y);
+	//	lua_pushnumber(L, _r);
+	//	// call
+	//	int err = lua_pcall(L, 4, 1, 0);
+	//	if(err)
+	//	{
+	//		E_ASSERT1(0, lua_tostring(L, -1)); 
+	//		lua_pop(L, 1); 
+	//		return false;
+	//	}
+	//	// return value
+	//	E_ASSERT(lua_isboolean(L, -1));
+	//	int ret = lua_toboolean(L, -1); 
+	//	lua_pop(L, 1);
+	//	return ret ? true : false;
+	//}
+
+	//bool LuaSprite::OnHit(const Vector2 & _pt)
+	//{
+	//	E_PROFILE_INCLUDE;
+	//	// function name
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idOnHit);
+	//	E_ASSERT(lua_isfunction(L,-1));
+	//	// push self
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idTable);
+	//	E_ASSERT(lua_istable(L,-1));
+	//	// other args
+	//	lua_pushnumber(L, _pt.x);
+	//	lua_pushnumber(L, _pt.y);
+	//	// call
+	//	int err = lua_pcall(L, 3, 1, 0);
+	//	if(err)
+	//	{
+	//		E_ASSERT1(0, lua_tostring(L, -1)); 
+	//		lua_pop(L, 1); 
+	//		return false;
+	//	}
+	//	// return value
+	//	E_ASSERT(lua_isboolean(L, -1));
+	//	int ret = lua_toboolean(L, -1); 
+	//	lua_pop(L, 1);
+	//	return ret ? true : false;
+	//}
+
+	//void LuaSprite::DropItem()
+	//{
+	//	E_PROFILE_INCLUDE;
+	//	// function name
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idDropItem);
+	//	E_ASSERT(lua_isfunction(L,-1));
+	//	// push self
+	//	lua_rawgeti(L, LUA_REGISTRYINDEX, idTable);
+	//	E_ASSERT(lua_istable(L,-1));
+	//	// call
+	//	int err = lua_pcall(L, 1, 0, 0);
+	//	if(err)
+	//	{
+	//		E_ASSERT1(0, lua_tostring(L, -1)); 
+	//		lua_pop(L, 1); 
+	//		return;
+	//	}
+	//}
+
+	bool LuaSprite::Step()
+	{
+		E_PROFILE_INCLUDE;
+		// function name
+		lua_rawgeti(L, LUA_REGISTRYINDEX, idStep);
+		E_ASSERT(lua_isfunction(L,-1));
+		// push self
+		lua_rawgeti(L, LUA_REGISTRYINDEX, idTable);
+		E_ASSERT(lua_istable(L,-1));
+		// call
+		int err = lua_pcall(L, 1, 1, 0);
+		if(err)
+		{
+			E_ASSERT1(0, lua_tostring(L, -1)); 
+			lua_pop(L, 1); 
+			return false;
+		}
+		// return value
+		E_ASSERT(lua_isboolean(L, -1));
+		int ret = lua_toboolean(L, -1); 
+		lua_pop(L, 1);
+		return ret ? true : false;
+	}
+
+	void LuaSprite::Render()
+	{
+		E_PROFILE_INCLUDE;
+		// function name
+		lua_rawgeti(L, LUA_REGISTRYINDEX, idRender);
+		E_ASSERT(lua_isfunction(L,-1));
+		// push self
+		lua_rawgeti(L, LUA_REGISTRYINDEX, idTable);
+		E_ASSERT(lua_istable(L,-1));
+		// call
+		int err = lua_pcall(L, 1, 0, 0);
+		if(err)
+		{
+			E_ASSERT1(0, lua_tostring(L, -1)); 
+			lua_pop(L, 1); 
+			return;
+		}
+	}
+
+	//bool LuaSprite::RegisterForLua()
+	//{
+
+	////	int r;
+	//	if(0 > script->RegisterInterface("ShotInterface"))
+	//	{
+	//		return false;
+	//	}
+	//	if(0 > script->RegisterInterfaceMethod("ShotInterface", "bool Collide(float, float, float)"))
+	//	{
+	//		return false;
+	//	}
+	//	if(0 > script->RegisterInterfaceMethod("ShotInterface", "bool OnHit(float, float)"))
+	//	{
+	//		return false;
+	//	} 
+	//	if(0 > script->RegisterInterfaceMethod("ShotInterface", "void DropItem()"))
+	//	{
+	//		return false;
+	//	}
+	//	if(0 > script->RegisterInterfaceMethod("ShotInterface", "bool Step()"))
+	//	{
+	//		return false;
+	//	}
+	//	if(0 > script->RegisterInterfaceMethod("ShotInterface", "void Render()"))
+	//	{
+	//		return false;
+	//	}
+
+	//	asIObjectType * shotInterface = script->GetObjectTypeById(script->GetTypeIdByDecl("ShotInterface"));
+
+	//	idCollisionTest = shotInterface->GetMethodIdByName("Collide");
+	//	idOnHit = shotInterface->GetMethodIdByName("OnHit");
+	//	idDropItem = shotInterface->GetMethodIdByName("DropItem");
+	//	idStep = shotInterface->GetMethodIdByName("Step");
+	//	idRender = shotInterface->GetMethodIdByName("Render");
+
+	//	return true;
+	//}
+#endif
+}

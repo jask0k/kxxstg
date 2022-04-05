@@ -1,0 +1,132 @@
+// #include "../config.h"
+#include "LuaSupport.h"
+#include "KxxWin.h"
+#include "LuaShot.h"
+#include "LuaSprite.h"
+
+namespace e
+{
+#ifdef E_CFG_LUA
+
+	int LuaDebugPrint(lua_State * L)
+	{
+		E_ASSERT(lua_gettop(L) == 1);
+		const char * p = lua_tostring(L, 1);
+		E_TRACE_LINE(p);
+		return 0;
+	}
+
+
+	int LuaAddDrop(lua_State * L)
+	{
+		E_ASSERT(lua_gettop(L) == 3);
+		int item = lua_tointeger(L, 1);
+		float x = lua_tofloat(L, 2);
+		float y = lua_tofloat(L, 3);
+		kxxwin->AddDrop(item, x, y);
+		return 0;
+	}
+
+	int LuaAddFlashSpark(lua_State * L)
+	{
+		E_ASSERT(lua_gettop(L) == 2);
+		float x = lua_tofloat(L, 1);
+		float y = lua_tofloat(L, 2);
+		kxxwin->AddFlashSpark(x, y);
+		return 0;
+	}
+
+	int LuaLogicRandom(lua_State * L)
+	{
+		// E_LUA_ERROR(L, "unimplement.");
+		E_ASSERT(lua_gettop(L) == 0);
+		lua_pushinteger(L, logic_random_int());
+		return 1;
+	}
+
+	// float PointLineSegDistanceSquared2D(const Vector2 & q, const Vector2 & p0, const Vector2 & p1, float & t);
+	int LuaPointLineSegDistanceSquared2D(lua_State * L)
+	{
+		Vector2 q, p0, p1;
+		E_ASSERT(lua_gettop(L) == 6);
+		q.x  = lua_tofloat(L, 1);
+		q.y  = lua_tofloat(L, 2);
+		p0.x = lua_tofloat(L, 3);
+		p0.y = lua_tofloat(L, 4);
+		p1.x = lua_tofloat(L, 5);
+		p1.y = lua_tofloat(L, 6);
+		float t;
+		lua_pushnumber(L, PointLineSegDistanceSquared2D(q, p0, p1, t));
+		lua_pushnumber(L, t);
+		return 2;
+	}
+
+	int LuaRegisterEnemyShot(lua_State * L);
+	bool RegisterForLua(lua_State * L)
+	{
+		luaopen_base(L);
+		luaopen_table(L);
+		//luaopen_io(L);
+		luaopen_string(L);
+		luaopen_math(L);
+		//luaopen_debug(L);
+
+		if(!Graphics::Register(L))
+		{
+			E_ASSERT(0);
+			return false;
+		}
+
+		if(!LuaShot::Register(L))
+		{
+			E_ASSERT(0);
+			return false;
+		}
+		lua_register(L, "DebugPrint", &LuaDebugPrint);
+		//lua_register(L, "AddEnemyShot", &LuaShot::NewEnemyShot);
+		//lua_register(L, "AddPlayerShot", &LuaShot::NewPlayerShot);
+		lua_register(L, "AddSpark", &LuaSprite::NewSpark);
+		lua_register(L, "RegisterEnemyShot", &LuaRegisterEnemyShot);
+		lua_register(L, "LogicRandom", &LuaLogicRandom);
+		lua_register(L, "AddDrop", &LuaAddDrop);
+		lua_register(L, "AddFlashSpark", &LuaAddFlashSpark);
+		lua_register(L, "PointLineSegDistanceSquared2D", &LuaPointLineSegDistanceSquared2D);
+
+
+		//if(strstr(asGetLibraryOptions(), "AS_MAX_PORTABILITY"))
+		//{
+		//	ReportError(L"AS_MAX_PORTABILITY");
+		//	exit(1);
+		//}
+
+		//// underlying type
+		//RegisterLuaString(script);
+
+		//if(0 > script->RegisterGlobalFunction("float pow(float, float)", asFUNCTION(&powf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float sqrt(float)", asFUNCTION(&sqrtf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float cos(float)", asFUNCTION(&cosf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float sin(float)", asFUNCTION(&sinf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float tan(float)", asFUNCTION(&tanf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float log(float)", asFUNCTION(&logf), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("float atan2(float,float)", asFUNCTION(&atan2f), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+
+		////if(!TexRef::RegisterForLua(script, "TexRef", "Tex"))E_BREAK_RETURN_FALSE;
+
+		//if(!Vector2::RegisterForLua(script))E_BREAK_RETURN_FALSE;
+		//if(!Graphics::RegisterForLua(script))E_BREAK_RETURN_FALSE;
+		//if(!LuaShot::RegisterForLua())E_BREAK_RETURN_FALSE;
+
+		//if(0 > script->RegisterGlobalFunction("void AddEnemyShot(ShotInterface @)", asFUNCTION(&LuaAddEnemyShot), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("void AddDrop(int, float, float)", asFUNCTION(&LuaAddDrop), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("void AddFlashSpark(float, float)", asFUNCTION(&LuaAddFlashSpark), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("void DrawQuad(float, float, float, float)", asFUNCTION(&LuaDrawQuad), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("void SetColor(float, float, float, float)", asFUNCTION(&LuaSetColor), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("void BindTex(Tex &in)", asFUNCTION(&LuaBindTex), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("int LogicRandom()", asFUNCTION(&LuaLogicRandom), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("bool RegisterEnemyShot(int, string& in)", asFUNCTION(&LuaRegisterEnemyShot), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+		//if(0 > script->RegisterGlobalFunction("Tex LoadTex(string& in)", asFUNCTION(&LuaLoadTex), asCALL_CDECL))E_BREAK_RETURN_FALSE;
+
+		return true;
+	}
+#endif //
+}

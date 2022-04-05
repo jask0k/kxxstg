@@ -23,5 +23,5 @@ Linux下编译:
 	* 在可执行文件所在目录创建一个名为 portable 的空文件 (Windows版可省略这一步)
 	* 运行
 	
-Hexbug (wriggle2010@hotmail.com)
+[Hexbug](wriggle2010@hotmail.com)
 
